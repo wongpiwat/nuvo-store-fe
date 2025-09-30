@@ -1,8 +1,8 @@
-import { ChevronLeftIcon } from '@heroicons/react/24/solid'
+import Chevron from '../chevron/Chevron';
 import type { Product } from '../../types/product';
 import './styles.scss';
 
-interface ProductCardProps {
+interface ProductItemProps {
   product: Product;
   isActive: boolean;
   onSelect: () => void;
@@ -12,21 +12,16 @@ export default function ProductItem({
   product,
   isActive,
   onSelect,
-}: ProductCardProps) {
+}: ProductItemProps) {
   return (
-    <div
-      className={`product-card ${isActive ? 'active' : ''}`}
-      onClick={onSelect}
-      role="button"
-      tabIndex={0}
-    >
+    <div className="product-item" role="button" tabIndex={0} onClick={onSelect}>
       <img
+        className="product-item__image"
         src={product.image}
         alt={product.title}
-        className="product-card__image"
       />
-      <h4 className="product-card__title">{product.title}</h4>
-      <ChevronLeftIcon className={`chevron ${isActive ? 'chevron--active' : ''}`} />
+      <h4 className="product-item__title">{product.title}</h4>
+      <Chevron isActive={isActive} />
     </div>
   );
 }
