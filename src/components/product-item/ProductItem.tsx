@@ -14,7 +14,7 @@ export default function ProductItem({
   onSelect,
 }: ProductItemProps) {
   return (
-    <div className="product-item" role="button" tabIndex={0} onClick={onSelect}>
+    <div className={`product-item ${isActive ? 'active' : ''}`} role="button" tabIndex={0} onClick={onSelect}>
       <img
         className="product-item__image"
         src={product.image}

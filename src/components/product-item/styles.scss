@@ -8,7 +8,8 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 
-  &:hover {
+  &.active,
+  &:hover{
     background: #F9F9F9;
     border-radius: 4px;
   }
