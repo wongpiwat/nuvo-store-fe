@@ -1,0 +1,45 @@
+
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: #FFF;
+  }
+
+  &__title {
+    flex: 1;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .chevron {
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #4EA4B8;
+    color: #4EA4B8;
+    stroke-width: 2px;
+    stroke: #4EA4B8;
+    transform: rotate(0);
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+    &--active {
+      background: #4EA4B8;
+      color: #FFF;
+      stroke: #FFF;
+      transform: rotate(180deg);
+    }
+  }
+}

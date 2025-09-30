@@ -1,0 +1,40 @@
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+
+  &__price {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+  }
+
+  &__description {
+    //color: #222;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    height: 70vh;
+
+    &__content {
+      flex-grow: 1;
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2rem;
+    }
+  }
+
+}

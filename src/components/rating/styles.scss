@@ -1,0 +1,26 @@
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+
+  &__star {
+    margin-right: 2px;
+    &.full {
+      color: #FBEA8C;
+    }
+    &.half {
+      background: linear-gradient(90deg, #FBEA8C 50%, #CCC 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &.empty {
+      color: #CCC;
+    }
+  }
+
+  &__count {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+}
